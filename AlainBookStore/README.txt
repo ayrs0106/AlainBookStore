@@ -45,3 +45,7 @@ BootTheme Darkly added with Content Management Link into the Navbar
 Project builded by 3rd time succesfully
 Part 1.4 started
 Repository Created and pushed
+Projects Created AlainBookStore DataAccess/Models/Utility
+Data folder copied and pasted from AlainBookStore to AlainBookStore.DataAccess
+Data folder deleted from AlinBookStore
+Installation of Microsoft.EntityFrameworkCore.Relational version5.0.11 and Microsoft.EntityFrameworkCore.SqlServer Version5.0.11 in the four projects
