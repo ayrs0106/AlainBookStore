@@ -49,3 +49,11 @@ Projects Created AlainBookStore DataAccess/Models/Utility
 Data folder copied and pasted from AlainBookStore to AlainBookStore.DataAccess
 Data folder deleted from AlinBookStore
 Installation of Microsoft.EntityFrameworkCore.Relational version5.0.11 and Microsoft.EntityFrameworkCore.SqlServer Version5.0.11 in the four projects
+Installed in all projects Identity.EntityFrameworkCore version 5.0.11
+Models folder moved from AlainBookStore to AlainBookStore.Models and deleted the original file
+Project References into AlainBookStore to DataAccess and Models Projects
+ErrorView in Models modified into the namespace to Models.ViewModels
+usying directive for AlainBookStore.DataAccess.Data added to startup file in main project
+removed original directive from startup.
+Ther eexist problems with ErrorViewModel references
+Nugets for Relational, Identity and SqlServer downgraded but the problem still remain
