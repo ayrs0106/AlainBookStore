@@ -32,7 +32,7 @@ namespace AlainBookStore
                     Configuration.GetConnectionString("DefaultConnection")));
 //            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
 //                .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddDefaultIdentity<IdentityUser>()
+            services.AddDefaultIdentity<IdentityUser>()// Options Removed
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
@@ -45,6 +45,7 @@ namespace AlainBookStore
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
+//                app.UseMigrationsEndPoint();
             }
             else
             {

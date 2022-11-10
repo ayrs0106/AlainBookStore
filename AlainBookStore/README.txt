@@ -1,5 +1,5 @@
 ﻿Class exercise 2
-10/24/2022 12:30
+2022 oct 10 12:30
 Port commented due to college restrictions at Launch settings
 startup.cs modified to clean the options, delete an error page and add the endpoint
 Repo created and app testedproject with webapp esp core 3.1 individual accounts enabled for blazor
@@ -29,9 +29,9 @@ In Views/Shared/_Layout.cshtml, add a dropdown to the NavBar
 Save, refresh and review the UI
 Change ‘Dropdown’ to ‘Content Management
 strugled with the dropdown control
-Continued 31 oct 2022 at 12:07
+Continued 2022 oct 31 at 12:07
 In Layout the bootstrap property data-bs-toggle has to be replaced by data-bs-toggle to have the dropdown bhaviour.
-Restarted 7 Nov 2022 at 12:40 
+Restarted 2022 Nov 7 at 12:40 
 Project restarted due to 3 projects addes with incorrect type of project
 project addes .NET Core Class Library (AlainBookStore DataAcces/Models/Utility)
 README copied from previous project (AlainRiveraBookStore)
@@ -57,3 +57,6 @@ usying directive for AlainBookStore.DataAccess.Data added to startup file in mai
 removed original directive from startup.
 Ther eexist problems with ErrorViewModel references
 Nugets for Relational, Identity and SqlServer downgraded but the problem still remain
+Continued in 20221110 at 12:25
+Second check trying to find the errorviewmodel reference and adjusting small issues like text-dark references not deleted from _Layout.cshtml in view\shared\layout
+SD class created at Utility after models and dataaccess projects referenced.
