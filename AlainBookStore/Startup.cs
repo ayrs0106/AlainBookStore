@@ -45,7 +45,7 @@ namespace AlainBookStore
             {
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
-//                app.UseMigrationsEndPoint();
+                app.UseMigrationsEndPoint();
             }
             else
             {
@@ -65,8 +65,9 @@ namespace AlainBookStore
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
+                    pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
+//                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            endpoints.MapRazorPages();
             });
         }
     }
