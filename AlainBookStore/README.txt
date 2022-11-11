@@ -60,3 +60,4 @@ Nugets for Relational, Identity and SqlServer downgraded but the problem still r
 Continued in 20221110 at 12:25
 Second check trying to find the errorviewmodel reference and adjusting small issues like text-dark references not deleted from _Layout.cshtml in view\shared\layout
 SD class created at Utility after models and dataaccess projects referenced.
+The reference was incomplete in main project views/shared/Error.cshtml and it was fxed adding the right reference after moving the models folter to Models project from ErrorViewModel => AlainBookStore.Models.ViewModels.ErrorViewModel
