@@ -62,3 +62,10 @@ Second check trying to find the errorviewmodel reference and adjusting small iss
 SD class created at Utility after models and dataaccess projects referenced.
 The reference was incomplete in main project views/shared/Error.cshtml and it was fxed adding the right reference after moving the models folter to Models project from ErrorViewModel => AlainBookStore.Models.ViewModels.ErrorViewModel
 Correction and adding customer area 20221111
+Database name modified
+Change to .Database default project to add the migration
+database updated
+Adding Category and migrating to Db
+Created Repository and IRepository folders together with IRepository and Repository Interfaces
+Updated with Repository file from blackboard
+Problem with UnitOfWork due to privacy scope

@@ -1,3 +1,4 @@
+using AlainBookStore.DataAccess.Repository.IRepository;
 using AlainBookStore.DataAccess.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -12,6 +13,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AlainBookStore.DataAccess.Repository;
+
 
 namespace AlainBookStore
 {
@@ -34,6 +37,7 @@ namespace AlainBookStore
 //                .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddDefaultIdentity<IdentityUser>()// Options Removed
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
