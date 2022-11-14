@@ -29,9 +29,9 @@ In Views/Shared/_Layout.cshtml, add a dropdown to the NavBar
 Save, refresh and review the UI
 Change ‘Dropdown’ to ‘Content Management
 strugled with the dropdown control
-Continued 2022 oct 31 at 12:07
+Continued 2022-10--31 at 12:07
 In Layout the bootstrap property data-bs-toggle has to be replaced by data-bs-toggle to have the dropdown bhaviour.
-Restarted 2022 Nov 7 at 12:40 
+Restarted 2022-10-7 at 12:40 
 Project restarted due to 3 projects addes with incorrect type of project
 project addes .NET Core Class Library (AlainBookStore DataAcces/Models/Utility)
 README copied from previous project (AlainRiveraBookStore)
@@ -57,11 +57,11 @@ usying directive for AlainBookStore.DataAccess.Data added to startup file in mai
 removed original directive from startup.
 Ther eexist problems with ErrorViewModel references
 Nugets for Relational, Identity and SqlServer downgraded but the problem still remain
-Continued in 20221110 at 12:25
+Continued in 2022-11-10 at 12:25
 Second check trying to find the errorviewmodel reference and adjusting small issues like text-dark references not deleted from _Layout.cshtml in view\shared\layout
 SD class created at Utility after models and dataaccess projects referenced.
 The reference was incomplete in main project views/shared/Error.cshtml and it was fxed adding the right reference after moving the models folter to Models project from ErrorViewModel => AlainBookStore.Models.ViewModels.ErrorViewModel
-Correction and adding customer area 20221111
+Correction and adding customer area 2022-11-11
 Database name modified
 Change to .Database default project to add the migration
 database updated
@@ -69,3 +69,6 @@ Adding Category and migrating to Db
 Created Repository and IRepository folders together with IRepository and Repository Interfaces
 Updated with Repository file from blackboard
 Problem with UnitOfWork due to privacy scope
+Resumed at 2022-11-14
+Public interface of IUnitOfWork
+public class UnitOfWork: IUnitOfWork to connect both
