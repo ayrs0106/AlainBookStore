@@ -10,7 +10,7 @@ using System.Text;
 namespace AlainBookStore.DataAccess.Repository
 {
     // Implements all the methods of the IRepository
-        public class Repository<T> : IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class
     {
         // modify the database w/ the db context
         private readonly ApplicationDbContext _db;      // get the db instance using the constructor and DI 
@@ -23,13 +23,11 @@ namespace AlainBookStore.DataAccess.Repository
         public void Add(T entity)
         {
             dbSet.Add(entity);      // add context so classes correspond to the DbSet in ApplicationDbContext
-//            throw new NotImplementedException();
         }
 
         public T Get(int id)
         {
             return dbSet.Find(id);
-//            throw new NotImplementedException();
         }
 
         public IEnumerable<T> GetAll(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string includeProperties = null)
@@ -52,8 +50,8 @@ namespace AlainBookStore.DataAccess.Repository
             {
                 return orderBy(query).ToList();
             }
+            //Error aqui AQUIVA
             return query.ToList();      // returns the IEnumerable based on the conditions of the query
-//            throw new NotImplementedException();
         }
 
         public T GetFirstOrDefault(Expression<Func<T, bool>> filter = null, string includeProperties = null)
@@ -73,29 +71,22 @@ namespace AlainBookStore.DataAccess.Repository
             }
 
             return query.FirstOrDefault();      // returns the IEnumerable based on the conditions of the query
-//            throw new NotImplementedException();
         }
 
         public void Remove(int id)
         {
             T entity = dbSet.Find(id);
             Remove(entity);
-//            throw new NotImplementedException();
         }
 
         public void Remove(T entity)
         {
             dbSet.Remove(entity);
-//            throw new NotImplementedException();
         }
 
         public void RemoveRange(IEnumerable<T> entity)
         {
             dbSet.RemoveRange(entity);
-//            throw new NotImplementedException();
         }
     }
-//    interface Repository
-//    {
-//    }
 }
