@@ -1,14 +1,14 @@
 ﻿@model AlainBookStore.Models.Category;
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var tittle = "Create Category";
+    var title = "Create Category";
 }
 <form method="post">
     <div class="row p-3 border">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         @if(Model.Id !=null)
         {
-            tittle = "Edit Category";
+            title = @title;
         }
         <div class="col-12 border-bottom">
             <h2 class="text-primary">TITLE</h2>
@@ -25,7 +25,7 @@
             </div>
             <div class="form-group row">
                 <div class="col-8 offset-4">
-                    @if (Model.Id != 0)
+                    @if(Model.Id != 0)
                     {
                         <partial name="_EditAndBackToListButton" model="Model.Id" />
                     }
@@ -38,3 +38,6 @@
         </div>
     </div>
 </form>
+@section Scripts{ 
+    <partial name="_ValidationScriptsPartial"/>
+}
