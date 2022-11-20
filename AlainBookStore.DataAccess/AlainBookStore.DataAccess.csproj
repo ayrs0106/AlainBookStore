@@ -17,6 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
+ 	<Folder Include="Data\" />
+	<Folder Include="Repository\IRepository"/>	
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AlainBookStore.Models\AlainBookStore.Models.csproj" />
     <ProjectReference Include="..\AlainBookStore.Utility\AlainBookStore.Utility.csproj" />
   </ItemGroup>

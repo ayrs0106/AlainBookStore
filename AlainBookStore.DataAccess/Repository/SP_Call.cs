@@ -32,7 +32,6 @@ namespace AlainBookStore.DataAccess.Repository.IRepository
                 sqlCon.Open();
                 sqlCon.Execute(procedureName, param, commandType: System.Data.CommandType.StoredProcedure);
             }
-//            throw new NotImplementedException();
         }
 
         public IEnumerable<T> List<T>(string procedureName, DynamicParameters param = null)
@@ -42,7 +41,6 @@ namespace AlainBookStore.DataAccess.Repository.IRepository
                 sqlCon.Open();
                 return sqlCon.Query<T>(procedureName, param, commandType: System.Data.CommandType.StoredProcedure);
             }
-//            throw new NotImplementedException();
         }
 
         public Tuple<IEnumerable<T1>, IEnumerable<T2>> List<T1, T2>(string procedureName, DynamicParameters param = null)
@@ -60,7 +58,6 @@ namespace AlainBookStore.DataAccess.Repository.IRepository
                 }
             }
             return new Tuple<IEnumerable<T1>, IEnumerable<T2>>(new List<T1>(), new List<T2>());
-            //            throw new NotImplementedException();
         }
         public T OneRecord<T>(string procedureName, DynamicParameters param = null)
         {
@@ -70,7 +67,6 @@ namespace AlainBookStore.DataAccess.Repository.IRepository
                 var value = sqlCon.Query<T>(procedureName, param, commandType: System.Data.CommandType.StoredProcedure);
                 return (T)Convert.ChangeType(value.FirstOrDefault(), typeof(T));
             }
-//            throw new NotImplementedException();
         }
         public T Single<T>(string procedureName, DynamicParameters param = null)
         {
@@ -79,7 +75,6 @@ namespace AlainBookStore.DataAccess.Repository.IRepository
                 sqlCon.Open();
                 return (T)Convert.ChangeType(sqlCon.ExecuteScalar<T>(procedureName, param, commandType: System.Data.CommandType.StoredProcedure), typeof(T));
             }
-//            throw new NotImplementedException();
         }
 
     }
