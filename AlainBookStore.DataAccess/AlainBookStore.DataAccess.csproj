@@ -7,6 +7,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20221112032641_AddCategoryToDb.cs" />
     <Compile Remove="Migrations\20221112032641_AddCategoryToDb.Designer.cs" />
+    <Compile Remove="Migrations\20221118065745_AddCoverTypeToDb.cs" />
+    <Compile Remove="Migrations\20221118065745_AddCoverTypeToDb.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,7 +20,7 @@
 
   <ItemGroup>
  	<Folder Include="Data\" />
-	<Folder Include="Repository\IRepository"/>	
+	<Folder Include="Repository\IRepository" />	
   </ItemGroup>
 
   <ItemGroup>

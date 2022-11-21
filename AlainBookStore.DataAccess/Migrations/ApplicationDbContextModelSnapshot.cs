@@ -50,7 +50,7 @@ namespace AlainBookStore.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CoverType");
+                    b.ToTable("CoverTypes");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

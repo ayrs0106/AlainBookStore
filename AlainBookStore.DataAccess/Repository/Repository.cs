@@ -50,7 +50,6 @@ namespace AlainBookStore.DataAccess.Repository
             {
                 return orderBy(query).ToList();
             }
-            //Error aqui AQUIVA
             return query.ToList();      // returns the IEnumerable based on the conditions of the query
         }
 
