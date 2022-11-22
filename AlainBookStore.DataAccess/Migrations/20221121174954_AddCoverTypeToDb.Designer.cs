@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlainBookStore.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221118065745_AddCoverTypeToDb")]
+    [Migration("20221121174954_AddCoverTypeToDb")]
     partial class AddCoverTypeToDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,7 +52,7 @@ namespace AlainBookStore.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CoverType");
+                    b.ToTable("CoverTypes");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
