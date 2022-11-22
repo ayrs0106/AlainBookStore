@@ -1,6 +1,9 @@
 ﻿using AlainBookStore.DataAccess.Repository.IRepository;
 using AlainBookStore.Models;
+using AlainBookStore.Models.ViewModels;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,27 +15,45 @@ namespace AlainBookStore.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        public ProductController(IUnitOfWork unitOfWork)
+        private readonly IWebHostEnvironment _hostEnvironment;
+        
+        public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
         {
             _unitOfWork = unitOfWork;
+            _hostEnvironment = hostEnvironment;
         }
+        
         public IActionResult Index()
         {
             return View();
-        }
+        }       
+
         public IActionResult Upsert(int? id)
         {
-            Product product = new Product();
+            ProductVM productVM = new ProductVM()
+            {
+                Product = new Product(),
+                CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                }),
+                CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                }),
+            };
             if (id == null)
             {
-                return View(product);
+                return View(productVM);
             }
-            product = _unitOfWork.Product.Get(id.GetValueOrDefault());
-            if (product == null)
+            productVM.Product = _unitOfWork.Product.Get(id.GetValueOrDefault());
+            if (productVM.Product == null)
             {
                 return NotFound();
             }
-            return View(product);
+            return View(productVM);
         }
 
         [HttpPost]
@@ -59,7 +80,7 @@ namespace AlainBookStore.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var allObj = _unitOfWork.Product.GetAll();
+            var allObj = _unitOfWork.Product.GetAll(includeProperties:"Category, CoverType");
             return Json(new { data = allObj });
         }
         [HttpDelete]
