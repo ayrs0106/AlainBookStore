@@ -1,9 +1,10 @@
 ﻿Class exercise 2
-2022 oct 10 12:30
+2022-10-10 12:30
 Port commented due to college restrictions at Launch settings
 startup.cs modified to clean the options, delete an error page and add the endpoint
 Repo created and app testedproject with webapp esp core 3.1 individual accounts enabled for blazor
-Continued at 28 oct 2022 12:08
+
+2022-10-28 12:08
 found the identity context in Data/Migrations
 Maybe I Need to create a new controller in startUp replacing the Home Controller but not changed at this step
 downloaded the Darkly theme from bootstrap
@@ -15,29 +16,21 @@ Line 23 - remove text-dark
 _LoginPartial.cshtml remove references to ‘text-dark’
 Application testes succesfully and commit done with those adjustments
 Add to the _Layout.cshtml page the additional stylesheets and scripts from the CSS_JS.txt file
-CSS:
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
-JS:
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="https://kit.fontawesome.com/e19c476714.js"></script>
 In Views/Shared/_Layout.cshtml, add a dropdown to the NavBar
 Save, refresh and review the UI
 Change ‘Dropdown’ to ‘Content Management
 strugled with the dropdown control
-Continued 2022-10--31 at 12:07
-In Layout the bootstrap property data-bs-toggle has to be replaced by data-bs-toggle to have the dropdown bhaviour.
-Restarted 2022-10-7 at 12:40 
-Project restarted due to 3 projects addes with incorrect type of project
-project addes .NET Core Class Library (AlainBookStore DataAcces/Models/Utility)
+
+2022-10-31 12:07
+Style Adjustments in Layout the bootstrap property data-bs-toggle has to be replaced by data-bs-toggle to have the dropdown behaviour.
+
+2022-11-7 12:40 
+Project restarted due to 3 projects complemented with problems in context with incorrect type of project
+project added .NET Core Class Library (AlainBookStore DataAcces/Models/Utility)
 README copied from previous project (AlainRiveraBookStore)
 Port commented due to college restrictions at Launch settings
 startup.cs modified to clean the options, delete an error page and add the endpoint
-Project builded by 1st time succesfully
+New Project builded by 1st time succesfully
 Layout modification to consider jQuery and bootstrap libraries
 Project builded by 2nd time succesfully
 Debugging brakpoints stablished and tested succesfully at index and privacy links
@@ -46,29 +39,78 @@ Project builded by 3rd time succesfully
 Part 1.4 started
 Repository Created and pushed
 Projects Created AlainBookStore DataAccess/Models/Utility
-Data folder copied and pasted from AlainBookStore to AlainBookStore.DataAccess
-Data folder deleted from AlinBookStore
-Installation of Microsoft.EntityFrameworkCore.Relational version5.0.11 and Microsoft.EntityFrameworkCore.SqlServer Version5.0.11 in the four projects
+Data folder moved from AlainBookStore to AlainBookStore.DataAccess
+Installation of Microsoft.EntityFrameworkCore.Relational version5.0.11
+Installation of Microsoft.EntityFrameworkCore.SqlServer Version5.0.11 in the four projects
 Installed in all projects Identity.EntityFrameworkCore version 5.0.11
-Models folder moved from AlainBookStore to AlainBookStore.Models and deleted the original file
+Models folder moved from AlainBookStore to AlainBookStore.Models
 Project References into AlainBookStore to DataAccess and Models Projects
 ErrorView in Models modified into the namespace to Models.ViewModels
 usying directive for AlainBookStore.DataAccess.Data added to startup file in main project
 removed original directive from startup.
-Ther eexist problems with ErrorViewModel references
+Existing problems with ErrorViewModel references
 Nugets for Relational, Identity and SqlServer downgraded but the problem still remain
-Continued in 2022-11-10 at 12:25
+
+2022-11-10 12:25
 Second check trying to find the errorviewmodel reference and adjusting small issues like text-dark references not deleted from _Layout.cshtml in view\shared\layout
+Problem solved adjusting the right reference of usying statement for ErrorViewModel
 SD class created at Utility after models and dataaccess projects referenced.
 The reference was incomplete in main project views/shared/Error.cshtml and it was fxed adding the right reference after moving the models folter to Models project from ErrorViewModel => AlainBookStore.Models.ViewModels.ErrorViewModel
-Correction and adding customer area 2022-11-11
+Customer admin area created
+
+2022-11-11 16:12
 Database name modified
 Change to .Database default project to add the migration
 database updated
-Adding Category and migrating to Db
+Adding Category field and migrating to Db succesfully
 Created Repository and IRepository folders together with IRepository and Repository Interfaces
 Updated with Repository file from blackboard
 Problem with UnitOfWork due to privacy scope
-Resumed at 2022-11-14
+
+2022-11-14 11:48
 Public interface of IUnitOfWork
 public class UnitOfWork: IUnitOfWork to connect both
+Adjustment in DefaultConnection connecting the defaukt localhost reference to project database
+Adding migration with problem due to project selected by defaut
+Solved choosing .DataAccess project
+Succesfully migration
+
+2022-11-18 12:30
+Sql syntax statements verified and database updated once checked in SQL server object explorer
+Creation of Category table in .DataAccess project
+Migration added to ApplicationDbContext
+Usying .Models statement added in ApplicationDbContext and re-running the migration
+Migration made via PM Console
+New category table verified
+
+2022-11-22 16:54
+Creation of Repository and Interfaces repositories folders
+Creation of classes and interfaces for: Repository, UnitOfWork, SP_Call and Category.
+Typing the CRUD methods and scafolding the project.
+Creation of views, index and upsert files with respective methods for CRUD operations.
+
+2022-11-23 11:13
+Implementation of methods, index, upsert files , clases and interfaces in Repository and IRepository folder
+Implementation in UnitOfWork with new migrations.
+Views and partial views made and link added in Navigation bar
+Migration done succesfully
+Project run succesfully.
+
+2022-11-23 20:06
+Delete method typed for category.js including the onclick event
+Creation of CoverType Table with same method of Category Table in Models
+Adding the Covertype to class, interface, unitofwork previous to migration
+CRUD operations typed
+Link co CoverType in Navbar
+Methods, Views, Links, adjustments in index and upsert to create and update migration and database
+
+2022-11-24 12:30
+Product table created
+Implementation of methods, views, link in navbar, product.js similar to CoverType.
+Adjustment of table fields with respective fields for Product.
+Creation of Index and Upsert _Layout
+Account created at Tiny.Cloud to the right creation of products but not finished
+ApiKey invalid, I need to create it at tiny.cloud
+Problem expected
+Running the application succesfully with expected problem
+Commit done at 2022-11-25 12:47
