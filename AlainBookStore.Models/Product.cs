@@ -24,7 +24,8 @@ namespace AlainBookStore.Models
         public Category Category { get; set; }
         [Required]
         public int CoverTypeId { get; set; }
-        [ForeignKey("CategoryId")]
+//        [ForeignKey("CategoryId")]
+        [ForeignKey("CoverTypeId")]
         public CoverType CoverType { get; set; }
     }
 }

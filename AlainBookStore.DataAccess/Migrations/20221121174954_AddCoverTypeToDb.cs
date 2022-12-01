@@ -7,7 +7,7 @@ namespace AlainBookStore.DataAccess.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "CoverTypes",
+                name: "CoverType",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -16,14 +16,14 @@ namespace AlainBookStore.DataAccess.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CoverTypes", x => x.Id);
+                    table.PrimaryKey("PK_CoverType", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CoverTypes");
+                name: "CoverType");
         }
     }
 }
